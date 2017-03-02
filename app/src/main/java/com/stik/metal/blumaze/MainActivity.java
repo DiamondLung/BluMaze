@@ -9,6 +9,8 @@ import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,6 +33,24 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+        final Button button = (Button) findViewById(R.id.buttonSend);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                EditText editSend = (EditText) findViewById(R.id.editSend);
+                EditText traceOut = (EditText) findViewById(R.id.editTrace);
+                traceOut.setText("click was pressed with text:\n" + editSend.getText());
+            }
+        });
+    }
+
+    public String getTextToSend() {
+        EditText editSend = (EditText) findViewById(R.id.editSend);
+        return editSend.getText().toString();
+    }
+
+    public void setTextReceived(String textReceived) {
+        EditText editReceived = (EditText) findViewById(R.id.editReceive);
+        editReceived.setText(textReceived);
     }
 
     @Override
