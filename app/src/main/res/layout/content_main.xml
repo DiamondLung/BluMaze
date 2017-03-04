@@ -15,5 +15,57 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Receive"
+        android:id="@+id/textRecieve"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SEND"
+        android:id="@+id/buttonSend"
+        android:layout_below="@+id/textRecieve"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="111dp"
+        android:clickable="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editReceive"
+        android:layout_below="@+id/textRecieve"
+        android:layout_toRightOf="@+id/textRecieve"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editSend"
+        android:layout_below="@+id/buttonSend"
+        android:layout_alignLeft="@+id/editReceive"
+        android:layout_alignStart="@+id/editReceive"
+        android:layout_alignRight="@+id/editReceive"
+        android:layout_alignEnd="@+id/editReceive"
+        android:editable="true"
+        android:maxLength="40"
+        android:text="hello blu" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/editTrace"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/editSend"
+        android:layout_alignEnd="@+id/editSend"
+        android:layout_below="@+id/editSend"
+        android:layout_alignParentBottom="true" />
+
 </RelativeLayout>
