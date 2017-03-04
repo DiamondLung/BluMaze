@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
 
         Log.e("MainActivity", "this is from the main activity, hooray!");
 
+        Log.e("MainActivity", "another comment out.");
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
